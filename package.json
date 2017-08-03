@@ -1,0 +1,23 @@
+{
+  "name": "mk-app-editable-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "mk-app-editable-table"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziaochina/mk-app-editable-table.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ziaochina/mk-app-editable-table/issues"
+  },
+  "homepage": "https://github.com/ziaochina/mk-app-editable-table#readme"
+}
