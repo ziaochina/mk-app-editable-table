@@ -88,12 +88,14 @@ class action {
 
         if (columnKey == 'name') {
             setTimeout(() => {
-                ReactDOM.findDOMNode(this.refName).focus()
+                const dom = ReactDOM.findDOMNode(this.refName)
+                dom.select()
             }, 0)
         }
         else if (columnKey == 'mobile')
             setTimeout(() => {
-                ReactDOM.findDOMNode(this.refMobile).focus()
+                const dom = ReactDOM.findDOMNode(this.refMobile)
+                dom.select()
             }, 0)
 
 
