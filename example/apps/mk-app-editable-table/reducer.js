@@ -3,6 +3,7 @@ import { reducer as MetaReducer } from 'mk-meta-engine'
 import config from './config'
 import { getInitState } from './data'
 import moment from 'moment'
+import extend from './extend'
 
 class reducer {
     constructor(option) {
@@ -22,7 +23,7 @@ class reducer {
 
     addEmptyRow = (state, rowIndex) => {
         var list = this.metaReducer.gf(state, 'data.list')
-        list = list.insert(rowIndex,Map({
+        list = list.insert(rowIndex, Map({
             id: list.size
         }))
 
@@ -32,9 +33,9 @@ class reducer {
     delrow = (state, id) => {
         var list = this.metaReducer.gf(state, 'data.list')
         const index = list.findIndex(o => {
-           return  o.get('id') == id
+            return o.get('id') == id
         })
-        
+
         if (index == -1)
             return state
 
@@ -45,7 +46,8 @@ class reducer {
 
 export default function creator(option) {
     const metaReducer = new MetaReducer(option),
-        o = new reducer({ ...option, metaReducer })
+        extendReducer = extend.reducerCreator({ ...option, metaReducer }),
+        o = new reducer({ ...option, metaReducer, extendReducer })
 
-    return { ...metaReducer, ...o }
+    return { ...metaReducer, ...extendReducer.gridReducer, ...o }
 }
