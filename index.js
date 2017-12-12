@@ -3,7 +3,7 @@ import * as data from './data'
 
 export default {
 	name: "mk-app-editable-table",
-	version: "1.0.7",
+	version: "1.0.8",
 	description: "mk-app-editable-table",
 	meta: data.getMeta(),
 	components: [],
