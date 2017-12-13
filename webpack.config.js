@@ -59,6 +59,7 @@ module.exports = {
             commonjs: 'immutable',
             amd: 'immutable'
         },
+        "moment": "moment",
         "mk-sdk": "MK",
         "mk-app-loader": {
             root:["MK","appLoader"],
